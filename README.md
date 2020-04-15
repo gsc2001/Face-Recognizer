@@ -29,6 +29,13 @@ Install dependencies :
 ```bash
 $ bash install.sh
 ```
+
+## Running
+Just type
+```bash
+$ python main.py
+```
+
 ## Instructions
 * To detect 
     - just click **Detect**.
