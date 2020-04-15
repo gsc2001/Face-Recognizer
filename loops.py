@@ -41,9 +41,10 @@ def save_loop(camera, name: str) -> None:
         process_this = not process_this
         # changing name of each face to empty string
         message = ''
+        for face in faces:
+            face.assign_name('')
         if len(faces) == 1:
             face_to_be_saved = faces[0]
-            face_to_be_saved.assign_name('')
         elif len(faces) > 1:
             message = 'More than 1 face detected'
         else:
