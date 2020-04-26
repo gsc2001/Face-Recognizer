@@ -3,16 +3,20 @@ import pandas as pd
 import face_recognition as fr
 from random import random
 
-faces_df = pd.read_csv('faces.csv')
+
+# try to open faces.csv if available 
+
+c = ['{}'.format(i) for i in range(128)] + ['names']
+faces_df = pd.DataFrame({},columns=c)
+try:
+    faces_df = pd.read_csv('faces.csv')
+except FileNotFoundError:
+    pass
+
 
 known_names = list(faces_df['names'])
 known_faces = faces_df[faces_df.columns[:-1]].to_numpy()
-# print(known_faces.shape)
 colors = {}
-
-
-# print(known_names)
-# print(known_faces)
 
 
 def find_face(face: Face = None) -> None:

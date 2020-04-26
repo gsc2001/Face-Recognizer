@@ -3,7 +3,14 @@ from face_class import Face
 import pandas as pd
 from search import update_data
 
-faces_df = pd.read_csv('faces.csv')
+
+# opening saved faces ... if not available create file
+c = ['{}'.format(i) for i in range(128)] + ['names']
+faces_df = pd.DataFrame({},columns=c)
+try:
+    faces_df = pd.read_csv('faces.csv')
+except FileNotFoundError:
+    faces_df.to_csv('faces.csv',index=False)
 
 
 def save(face: Face = None, name: str = None) -> None:
