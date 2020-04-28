@@ -39,13 +39,12 @@ $ python main.py
 ## Instructions
 * To detect 
     - just click **Detect**.
-    - Press **q** to close the 'Video' window. Cross icon doesn't work.
-    Seeking some help to make it work. :cry: .
+    - Press **q** to close the 'Video' window or click the cross icon. 
 * To scan a new face:
     - Enter your name in given area.
     - Click **Scan**.
     - When no warnings are shown and a rectangle is around your
-    face, press **q** to scan your face 
+    face, press **q** to scan your face or just close the window with cross icon. 
     
 #### Contact
 Feel free to contact me at:
