@@ -22,6 +22,8 @@ def search_loop(camera) -> None:
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+        if cv2.getWindowProperty('Video',cv2.WND_PROP_VISIBLE) < 1:
+            break;
 
 
 def save_loop(camera, name: str) -> None:
@@ -54,6 +56,8 @@ def save_loop(camera, name: str) -> None:
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+        if cv2.getWindowProperty('Video',cv2.WND_PROP_VISIBLE) < 1:
+            break;
 
     if face_to_be_saved is not None:
         save(face_to_be_saved, name)
